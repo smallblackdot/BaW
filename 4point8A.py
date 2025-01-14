@@ -11,8 +11,8 @@ from PIL import Image
 import os
 
 # Deletes old created images if they exist
-if os.path.exists("newImage.jpg"):
-  os.remove("newImage.jpg")
+if os.path.exists("newImageA.jpg"):
+  os.remove("newImageA.jpg")
 
 # Prints two blank lines to start our program output
 print("\n\n")
@@ -49,10 +49,7 @@ def newFilter(image):
 
     # Perform pixel manipulation and stores results
     # to a new red, green and blue components
-    if b >= 16:
-      b= 0
-    else:
-      b = b * 16
+
     newr = 0
     newg = g * 10
     newb = 0
@@ -68,7 +65,7 @@ def newFilter(image):
   # Assigns the pixel values to newImage
   newImage.putdata(new_pixels)
   # Saves the new image file
-  newImage.save("newImage.jpg")
+  newImage.save("newImageA.jpg")
 
 # Creates an ImageCore Object from original image
 pixels = img.getdata()
